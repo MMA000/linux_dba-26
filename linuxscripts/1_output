@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+name='mma'
+echo "Hello $name"
+
+printf "Name: %s\nAge: %d\n" $name 99
