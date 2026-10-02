@@ -27,5 +27,6 @@ for f in assets/*; do
 done
 
 for f on "${!file_type[@]}"; do
-    echo "$f -> ${file_type[$f]}"
+    echo "$f" -> "${file_type[$f]}"
+
 done

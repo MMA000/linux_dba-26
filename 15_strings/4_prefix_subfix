@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# secrets.pdf -> pdf is suffix (file extension (ending))
+
+
+file=secrets.projectX.pdf
+
+echo "$file"
+
+echo "${file#*.}" #starts from beginning in the variable, go to the first . and erases everything before the . when printing
+# this is called non-greedy
+
+# greedy (2 hashes ##)
+echo "${file##*.}"
+
+# percentage % starts from the ending instead of beggining like hash #
+echo "${file%.*}"
+
+echo "${file%%.*}"
+
+
+
+# environment variable
+echo "$PWD"
+
+repo_path="${PWD%/*}"
+echo "$repo_path"
+
+repo_name="${repo_path##*/}"
+echo "$repo_name"
+
+
+
