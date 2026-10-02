@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# This is going through every value in the list and printing it
+fruits=(apple pear banan kiwi 'sweet mango')
+
+echo "for fruits[@]"
+for fruit in "${fruits[@]}"; do
+    echo "Fruits: $fruit"
+done
+
+# this is one string (stringify), one line
+echo
+echo "for fruits[*]"
+for fruit in "${fruits[*]}"; do
+    echo "Fruits: $fruit"
+done

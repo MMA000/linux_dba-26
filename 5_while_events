@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Note: if you want a specific directory to monitor, type its name
+# e.g. "~/Downloads" instead of "$PWD" at the end of line 8
+
+echo "$PWD"
+mkdir -p staging
+
+inotifywait -m -e close_write -e moved_to --format "%f" "$PWD" | while
+read -r filename; do
+    echo "$filename"
+    mv "$filename" staging/
+done    

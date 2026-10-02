@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+echo "Markdown files in this folder"
+for file in *; do
+    if [[ $file == *.md ]]; then
+        echo "Markdown file: $file"
+    fi
+done

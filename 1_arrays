@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+fruits=(apple pear banan kiwi 'sweet mango')
+
+echo "\$fruits: $fruits"
+echo "fruits[-2]: ${fruits[-2]}"
+echo "fruits[-1]: ${fruits[-1]}"
+
+
+echo
+echo "all fruits using * (stringify): ${fruits[*]}"
+echo "these are the fruits ${fruits[*]}"
+
+IFS=', '
+echo "these are all the fruits: ${fruits[*]}"
+
+# slicing
+echo "${fruits[@]:1:2}"
