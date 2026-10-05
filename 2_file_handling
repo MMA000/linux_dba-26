@@ -22,11 +22,11 @@ for f in assets/*; do
     elif [[ -x "$f" ]]; then
         file_type["$filename"]="executable"
     else
-        file_type["$filename"]=regular file"
+        file_type["$filename"]="regular file"
     fi
 done
 
-for f on "${!file_type[@]}"; do
-    echo "$f" -> "${file_type[$f]}"
+for f in "${!file_type[@]}"; do
+    echo "$f -> ${file_type[$f]}"
 
 done
